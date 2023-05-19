@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,f,s,t,l;
+    int n,r,f,s,t,i;
     scanf("%d",&n);
-    l=n%10;
+    i=n%10;
     n=n/10;
     t=n%10;
     n=n/10;
@@ -23,9 +23,9 @@ int main()
     {
         t=9;
     }
-    else if(l==6)
+    else if(i==6)
     {
-        l=9;
+        i=9;
     }
-    printf("%d%d%d%d",f,s,t,l);
+    printf("%d%d%d%d",f,s,t,i);
 }
