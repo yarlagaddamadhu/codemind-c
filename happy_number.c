@@ -1,26 +1,28 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int i,j,n,temp,sum=0;
+    int n,r,p,s=0;
     scanf("%d",&n);
-    while(sum!=1&&sum!=4)
+    start: 
+    s=0; 
+    while(n>0) 
     {
-        sum=0;
-        while(n>0)
-        {
-            j=n%10;
-            sum+=(j*j);
-            n=n/10;
-        }
-        n=sum;
+        r=n%10; 
+        n/=10;
+        p=r*r;
+        s+=p;
     }
-    if(sum==1)
+    n=s;
+    if(n==1 || n==7)
     {
         printf("True");
     }
-    else
+    else if(n<10) 
     {
         printf("False");
+    }
+    else
+    {
+        goto start; 
     }
 }
